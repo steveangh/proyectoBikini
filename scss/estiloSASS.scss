@@ -1,0 +1,703 @@
+/*IMPORTS*/
+@import 'estiloTitulos';
+@import 'mixins';
+
+/* -------------------- SECCIÓN MENÚ / NAV BAR -------------------------------------*/
+
+.mynav {
+
+    .bg-light {
+        background-color: #4D9E5C!important;
+        }
+    
+        .navbar {
+    
+            .navbar-nav {
+                margin: 0 auto;           
+            }
+    
+            .nav-item a{
+                color: #fff !important;
+            }
+    
+            .dropdown-menu {
+                background-color: #4D9E5C!important;
+            }
+    
+            form button {
+                background-color: #fff !important;
+                color: #4D9E5C;
+            }
+    
+            form button:hover {
+                background-color: #4D9E5C !important;
+            }
+    
+        }
+
+        .nav-item {
+    margin-left: 100px;
+    }
+}
+
+/* --------------------FOOTER-------------------------------------*/
+.bg-light {
+    background-color: #4D9E5C!important;
+    
+    .text-center {
+        color:white!important;
+        }
+        
+        .text-dark {
+        color: #fff!important;
+        }
+    }  
+
+    .footerContent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sociales {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 3rem 0;        
+    }
+
+    .sociales li {
+        margin: 0 10px;
+    }
+
+    .sociales a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .sociales a i {
+        font-size: 1.1rem;
+        transition: color .4s ease;
+
+    }
+
+    .sociales a:hover {
+        color:red;
+        
+    }
+
+/* -------------------- SECCIÓN PRINCIPAL/INDEX-------------------------------------*/
+
+/* -------------------- GRID CONTENEDOR DE PAGINA PRINCIPAL/INDEX-------------------------------------*/
+.tituloPrincipal {
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#containerIndex {
+display: grid;
+height: 900px;
+width: 100vw;
+grid-template-columns: 100%;
+grid-template-rows: 97% 3%;
+grid-template-areas:
+                        "section"
+                        "footer";
+
+/* -------------------- GRID DE GALERIA DE PÁGINA PRINCIPAL/INDEX -------------------------------------*/
+                          #galeriaIndex {
+                            display: grid;
+                            grid-template-columns: 20% 20% 20% 20% 20%;
+                            grid-template-rows: 100%;
+                            grid-template-areas:
+                                                    "index1 index2 index3 index4 index5";
+
+
+                                                    #photo1 {
+                                                        grid-area: index1;
+                                                    }
+                                                    
+                                                    #photo2 {
+                                                        grid-area: index2;
+                                                    }
+                                                    
+                                                    #photo3 {
+                                                        grid-area: index3;
+                                                    }
+                                                    
+                                                    #photo4 {
+                                                        grid-area: index4;
+                                                    }
+                                                    
+                                                    #photo5 {
+                                                        grid-area: index5;
+                                                    }
+                        }
+  }
+
+  /* -------------------- ESTILO DE IMAGEN DE PAGINA PRINCIPAL-------------------------------------*/
+  .imagenIndex {
+  border-radius: 0%;
+  width: 100%;
+  height: 100%;
+  animation-duration: 5s;
+  animation-name: aparecer;
+
+  :hover {
+    opacity: .5;
+    transition: .8s;
+  }
+
+  }
+
+  /* -------------------- ESTILO DE BARRA DIVISOR DE PAGINA PRINCIPAL -------------------------------------*/
+  hr {
+    height: 5px; 
+    margin: 0 auto; 
+    margin-top: 50px; 
+    width: 80%; 
+    color: #4D9E5C; 
+    
+    }
+  /* -------------------- ESTILO DE VIDEO -------------------------------------*/
+  iframe   {
+  margin: 100px auto 100px auto;
+  width: 900px;
+  height: 500px;
+  display: block;
+  }
+          
+  /* --------------------MEDIA QUERY-------------------------------------*/
+  @media only screen and (max-width: 768px) {
+  
+  
+  }
+/* -------------------- SECCIÓN BIKINI -------------------------------------*/
+
+
+/* -------------------- GRID GALERIA BIKINI -------------------------------------*/
+#galeriaBikini {
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: 100%;
+
+}
+
+/* -------------------- CARRUSEL IMAGEN -------------------------------------*/
+.carousel img {
+min-width: 100%;
+height: 700px;
+max-width: none;
+}
+
+/* -------------------- CARRUSEL SLIDER -------------------------------------*/
+.carousel-item {
+height: 60vh;
+min-height: 55vh;
+background: no-repeat scroll center scroll;
+-webkit-background-size: cover;
+background-size: cover;
+
+:before {
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    opacity: 0.3;
+    }
+}
+
+/* -------------------- CARRUSEL PIE DE IMAGEN -------------------------------------*/
+.carousel-caption {
+padding-left: 100px;
+padding-right: 100px;
+
+h5 {
+    font-size: $tamañoTitulo;
+    font-family: $estiloTexto;
+    }
+
+}
+
+/* -------------------- BOTÓN DE CARRUSEL -------------------------------------*/
+.slider-btn {
+margin-top: 10px;
+/* -------------------- BOTÓN 1 DE CARRUSEL -------------------------------------*/
+.btn {
+    background-color: #4D9E5C;
+    color:#fff;
+    border-radius: 5%;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+    margin-right: 10px;
+    }
+/* -------------------- BOTÓN 2 DE CARRUSEL  -------------------------------------*/
+.btn-2 {
+    background-color: #83a088;
+    color:#fff;
+    }
+
+}
+
+/* -------------------- DIVISOR DE BIKINIS -------------------------------------
+.divisor {
+width: 100%;
+height: 50px;
+background-color: #4D9E5C;
+}
+*/
+/* -------------------- CONTENEDOR BIKINI TEXTO Y PARRAFOS -------------------------------------*/
+#containerBikini {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    align-items: center;
+    justify-content: center;
+    background-color: #c5d7bd;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+
+/* -------------------- ESTILOS DEL TITULO BIKINI -------------------------------------*/
+/*
+$estiloTexto: Verdana;
+$tamañoTitulo: 20px;
+$tamañoTexto: 15px;*/
+
+.tituloBikini {
+    text-align: center;
+    font-size: $tamañoTitulo;
+    font-family: $estiloTexto;
+    color: black;
+    margin-top: 100px;
+    }
+    /* -------------------- ESTILOS DEL PARRAFO BIKINI -------------------------------------*/
+    .parrafoBikini {
+    text-align: justify;
+    font-family: $estiloTexto;
+    font-size: $tamañoTexto;
+    color: black;
+    padding: 20px 20px;
+    }
+}
+
+
+
+
+/* --------------------MEDIA QUERY-------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+#galeriaBikini {
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: 100%;
+}
+
+
+}
+
+/* -------------------- ACCESORIOS -------------------------------------*/
+
+/* -------------------- GRID ACCESORIOS -------------------------------------*/
+#galeriaAccesorios {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-template-areas:
+                                "foto1 foto2 foto3 "
+                                "foto4 foto5 foto6"
+                                "foto7 foto8 foto9";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    #foto1 {
+        grid-area: foto1;
+    
+    }
+    
+    #foto2 {
+        grid-area: foto2;
+    }
+    
+    #foto3 {
+        grid-area: foto3;
+    }
+    
+    #foto4 {
+        grid-area: foto4;
+    }
+    
+    #foto5 {
+        grid-area: foto5;
+    }
+    
+    #foto6 {
+        grid-area: foto6;
+    }
+    
+    #foto7 {
+        grid-area: foto7;
+    }
+    
+    #foto8 {
+        grid-area: foto8;
+    }
+    
+    #foto9 {
+        grid-area: foto9;
+    }
+  }
+  
+  
+  img {
+      max-width: 100%;
+      height: 80vh;
+      width: 80vh;
+      border-radius: 5%;
+  }
+  
+  .accesorioFotos:hover {
+    opacity: .5;
+    transition: .6s;   
+    
+  }
+
+  /* --------------------MEDIA QUERY-------------------------------------*/
+@media only screen and (max-width: 768px) {
+
+    #galeriaAccesorios {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    }
+    
+    
+    }
+/* -------------------- SECCIÓN NOSOTROS -------------------------------------*/
+
+.contenedorNosotros {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+
+    .imagenNosotros {
+        flex-basis: 40%;
+        height: 100%;
+        position: relative;
+        }
+        
+        .imgNosotros {
+        height: 100%;
+        width: 100%;   
+        border-radius: 0;
+        object-fit: cover;
+        animation-duration: 5s;
+        animation-name: aparecer;
+    
+                @keyframes aparecer {
+          0% {
+             opacity: 0;
+           }
+           100% {
+             opacity: 1;
+           }
+        }
+        }
+    }
+    
+   
+
+    .textoNosotros {
+    background-color: #c5d7bd;
+    flex-basis: 60%;
+
+    .tituloNosotros {
+        text-align: center;
+        font-size: $estiloTituloNosotros;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 50px;
+        margin-top: 100px;
+        }
+        
+        .parrafoNosotros {
+        text-align: justify;
+        font-size: $estiloParrafoNosotros;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 50px 50px;
+        line-height: 1.5;
+        }
+    }
+    
+   
+/* -------------------- SECCIÓN CONTACTO -------------------------------------*/
+.imagenContacto img {
+    border-radius: 0%;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .form {
+  height: 625px;
+  border-radius: 5px;
+  background-color: #c5d7bd;
+  padding: 20px;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+  
+  .btn-success  {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    :hover {
+        background-color: #45a049;
+      }
+  
+  }
+  
+  .contenedorContacto {
+    border-radius: 5px;
+    background-color: #c5d7bd;
+    padding: 20px;
+  }
+
+/* -------------------- SECCIÓN DE TALLAS -------------------------------------*/
+
+ /* -------------------- IMAGEN -------------------------------------*/
+.imagenTallas {
+
+&__img {
+    border-radius: 0%;
+    width: 100%;
+    height: 200px;   
+}
+}
+ /* -------------------- IMAGEN -------------------------------------*/
+.textoTallas {
+    background-color: #c5d7bd;
+    &__parrafo {
+        background-color: #c5d7bd;
+        text-align: center;   
+    }
+    }
+/* -------------------- CONTENEDOR -------------------------------------*/
+#contenedorTallas {
+    display: grid;
+    height: 600px;
+    background-color: #c5d7bd;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:        
+                                "Seccion1 Seccion2"
+                                "Seccion3 Seccion4";
+                                
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+   
+}
+
+/* ------------------------------------ TITULO DE TABLA ------------------------------------------*/
+
+
+.tituloMedidas {
+text-align: center;
+font-size: $tamañoTitulo;
+font-family: $estiloTexto;
+color: black;
+margin-top: 50px;
+}
+
+/* ------------------------------ TABLA DE MEDIDAS DEL PRODUCTO -------------------------------------*/
+.center {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.Tallasparrafo {
+    font-size: $tamañoTexto;
+    font-family: $estiloTexto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5d7bd;
+}
+
+.Medidas {
+    border-collapse: collapse;
+    width: 100%;
+    
+
+    &__encabezado {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    &__celda {
+        padding: 15px;
+        text-align: left;
+        font-family: $estiloTexto;
+        font-size: $tamañoTexto;
+        border-bottom: 1px solid #ddd;
+    }
+    
+}
+
+
+.Colores {
+    margin-left: 25%;
+    margin-right: 25%;
+
+    &__titulo {
+        text-align: center;
+        font-size: $tamañoTitulo;
+        font-family: $estiloTexto;
+        color: black;
+        margin-top: 50px;    
+    }
+
+    &__lista {
+        text-align: center;
+        font-family: $estiloTexto;
+        font-size: $tamañoTexto;
+         
+    }
+
+    &__itm {
+        font-size: $tamañoTextoG;
+        list-style: none; 
+        color: black;
+    }
+
+}
+
+  /* -------------------- SECCIÓN ENVÍOS -------------------------------------*/
+
+  .contenedorEnvio {
+      max-width: 1000px;
+      width: 90%;
+      margin: 0 auto;
+
+  }
+
+  .contenedor__cards {
+      margin: 70px 0;
+  }
+
+  .card {
+      background:#c5d7bd;
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-bottom: 50px;
+
+    &__thumbnail {
+        width: 650px;
+        height: 200px;          
+        margin-right: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      &__img {
+          width: 100%;
+      }
+
+      &__titulo {
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-size: $textoTalle;
+          font-weight: normal;
+          margin-bottom: 20px;
+      }
+
+      &__enlace {
+          color: #000;
+      }
+
+      &__extracto {
+          line-height: 28px;
+          color: black;
+          margin-bottom: 20px;
+      }
+
+  }
+
+  .boton {
+      border: none;
+      min-width: 180px;
+      height: 50px;
+      padding: 0 30px;
+      background: #000;
+      color: #fff;
+      display: inline-block;
+      border-radius: 100px;
+      text-decoration: none;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #403CC2;
+      transition: -3s ease all;
+
+      &__texto {
+         font-weight: 600; 
+      }
+
+      :hover {
+        background: #1B1881;
+        text-decoration: none;
+        }
+  }
+
+    .boton--absolute {
+        position: absolute;
+        right: 20px;
+        bottom: -25px;
+    }
+  
+    .boton--verde {
+        background: #7BA771;
+
+        :hover {
+            background: #437837;
+        }
+    }
+
+    .frase {
+        text-align: center;
+        margin: 70px 0;
+
+    &__texto {
+        margin-bottom: 20px;
+        font-size: $textoTalle;
+        font-family: Verdana;
+        font-weight: 600;
+        font-style: italic;
+    }    
+    }
+
